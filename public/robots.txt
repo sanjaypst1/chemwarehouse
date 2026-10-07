@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sanjaypst1.github.io/chemwarehouse/sitemap.xml

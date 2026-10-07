@@ -1,0 +1,61 @@
+@media print {
+  .skip-link,
+  .site-header,
+  .scroll-progress,
+  .hero-canvas,
+  .hero-fallback,
+  .back-to-top,
+  .cta-row,
+  .menu-toggle,
+  .drawer,
+  canvas {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #111;
+    font-size: 11.5pt;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .section {
+    padding: 1.2rem 0;
+    break-inside: avoid;
+  }
+
+  .card,
+  .panel,
+  .align-item,
+  .flow-step {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  #plan {
+    page-break-before: always;
+  }
+
+  .plan-panel[hidden] {
+    display: block !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  .quote {
+    color: #102a43;
+  }
+}
+
+.print-only {
+  display: none;
+}

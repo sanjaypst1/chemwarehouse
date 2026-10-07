@@ -1,0 +1,37 @@
+:root {
+  --navy: #102a43;
+  --navy-mid: #16324f;
+  --ocean: #1a6fd4;
+  --ocean-bright: #2684ff;
+  --aqua: #2fb8be;
+  --aqua-soft: #52d3d8;
+  --mint: #7dcfb6;
+  --mint-soft: #a8e6cf;
+  --sky: #d9f2ff;
+  --lavender: #e9e4ff;
+  --coral: #e56b5b;
+  --coral-soft: #ff8a7a;
+  --bg: #fafcfd;
+  --surface: #f2f7fa;
+  --surface-2: #eef6f4;
+  --text: #16324f;
+  --muted: #526777;
+  --line: #d4e1ea;
+  --white: #ffffff;
+  --shadow: 0 18px 40px rgba(16, 42, 67, 0.08);
+  --shadow-soft: 0 8px 24px rgba(16, 42, 67, 0.06);
+  --radius: 18px;
+  --radius-sm: 12px;
+  --header: 4.5rem;
+  --max: 72rem;
+  --narrow: 42rem;
+  --font-display: 'Manrope', 'Segoe UI', sans-serif;
+  --font-body: 'DM Sans', 'Segoe UI', sans-serif;
+  --focus: 0 0 0 3px #fafcfd, 0 0 0 6px #1a6fd4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion: 0;
+  }
+}

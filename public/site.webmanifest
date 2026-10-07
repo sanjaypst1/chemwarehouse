@@ -1,0 +1,18 @@
+{
+  "name": "Sanjay Singh Rawat | Senior Scrum Master for Digital B2B eCommerce",
+  "short_name": "Sanjay Rawat",
+  "description": "Digital B2B eCommerce delivery briefing for Sanjay Singh Rawat.",
+  "start_url": "/chemwarehouse/",
+  "scope": "/chemwarehouse/",
+  "display": "standalone",
+  "background_color": "#FAFCFD",
+  "theme_color": "#102A43",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
