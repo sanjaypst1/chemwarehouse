@@ -1,41 +1,51 @@
 import { useState } from 'react'
+import { ConfidenceLabel } from '../components/ConfidenceLabel'
+import { LayerAccordion } from '../components/LayerAccordion'
 import { caseStudy } from '../data/caseStudy'
+import {
+  merckApiDomains,
+  merckCapabilityLayers,
+  merckJourneys,
+  merckLeadership,
+  merckNarrative,
+  valueStreams,
+} from '../data/merckArchitecture'
 
 export function CaseStudy() {
   const [active, setActive] = useState(caseStudy.chapters[0].id)
+  const [journeyId, setJourneyId] = useState(merckJourneys[0].id)
   const chapter = caseStudy.chapters.find((item) => item.id === active) ?? caseStudy.chapters[0]
-  const tabId = `chapter-${chapter.id}`
+  const journey = merckJourneys.find((item) => item.id === journeyId) ?? merckJourneys[0]
 
   return (
-    <section className="section" id="case-study" aria-labelledby="case-title">
+    <section className="section section-mint" id="case-study" aria-labelledby="case-title">
       <div className="wrap">
         <p className="eyebrow js-reveal">Featured case study</p>
         <h2 id="case-title" className="js-reveal">
-          {caseStudy.heading}
+          {merckNarrative.heading}
         </h2>
-        <p className="lede js-reveal">{caseStudy.supporting}</p>
-        <p className="js-reveal">{caseStudy.context}</p>
+        <p className="lede js-reveal">{merckNarrative.subtitle}</p>
+        <ConfidenceLabel kind="experience" />
+        <p className="js-reveal" style={{ marginTop: '1rem' }}>
+          {merckNarrative.intro}
+        </p>
         <p className="js-reveal">
-          The digital ecosystem enabled healthcare-professional engagement and B2B commerce-related
-          capabilities used by stakeholders such as:
+          The ecosystem served or supported user groups including:
         </p>
         <ul className="pill-row js-reveal">
-          {caseStudy.stakeholders.map((item) => (
+          {merckNarrative.userGroups.map((item) => (
             <li className="pill" key={item}>
               {item}
             </li>
           ))}
         </ul>
-        <p className="js-reveal" style={{ marginTop: '1.2rem' }}>
-          Markets supported:
+        <p className="panel js-reveal" style={{ marginTop: '1rem' }}>
+          {merckNarrative.insuranceNote}
         </p>
-        <ul className="market-list js-reveal">
-          {caseStudy.markets.map((item) => (
-            <li className="chip" key={item}>
-              {item}
-            </li>
-          ))}
-        </ul>
+        <p className="panel js-reveal" style={{ marginTop: '0.8rem' }}>
+          {merckNarrative.orderingNote}
+        </p>
+
         <div className="chapter-nav" role="tablist" aria-label="Case study chapters">
           {caseStudy.chapters.map((item) => (
             <button
@@ -55,7 +65,9 @@ export function CaseStudy() {
                 }
                 if (event.key === 'ArrowLeft') {
                   const prev =
-                    caseStudy.chapters[(index - 1 + caseStudy.chapters.length) % caseStudy.chapters.length]
+                    caseStudy.chapters[
+                      (index - 1 + caseStudy.chapters.length) % caseStudy.chapters.length
+                    ]
                   setActive(prev.id)
                 }
               }}
@@ -67,18 +79,118 @@ export function CaseStudy() {
         <article
           className="panel js-reveal"
           role="tabpanel"
-          id={tabId}
+          id={`chapter-${chapter.id}`}
           aria-labelledby={`tab-${chapter.id}`}
         >
           <h3>{chapter.title}</h3>
           <p>{chapter.body}</p>
         </article>
-        <h3 className="js-reveal" style={{ marginTop: '2rem' }}>
+
+        <h3 className="js-reveal" style={{ marginTop: '2.2rem' }}>
+          Two connected but different value streams
+        </h3>
+        <p className="panel js-reveal">{valueStreams.clarification}</p>
+        <div className="grid-2" style={{ marginTop: '1rem' }}>
+          {valueStreams.streams.map((stream) => (
+            <article className="card js-reveal" key={stream.id}>
+              <h4>{stream.title}</h4>
+              <ul>
+                {stream.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+
+        <h3 className="js-reveal" style={{ marginTop: '2.2rem' }}>
+          Illustrative capability architecture
+        </h3>
+        <ConfidenceLabel kind="illustrative" />
+        <p className="hint js-reveal" style={{ marginTop: '0.7rem' }}>
+          {merckNarrative.architectureLabel}
+        </p>
+        <LayerAccordion layers={merckCapabilityLayers} labelledBy="case-title" />
+
+        <h3 className="js-reveal" style={{ marginTop: '2.2rem' }}>
+          API domain map
+        </h3>
+        <ConfidenceLabel kind="illustrative" />
+        <p className="hint js-reveal" style={{ marginTop: '0.7rem' }}>
+          {merckNarrative.apiMapLabel}
+        </p>
+        <div className="grid-2" style={{ marginTop: '1rem' }}>
+          {merckApiDomains.map((domain) => (
+            <article className="card js-reveal" key={domain.id}>
+              <h4>{domain.title}</h4>
+              <ul>
+                {domain.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+        <p className="prominent-callout js-reveal" role="note">
+          {merckNarrative.apiOwnershipMessage}
+        </p>
+
+        <h3 className="js-reveal" style={{ marginTop: '2.2rem' }}>
+          Example end-to-end Merck journeys
+        </h3>
+        <div className="tabs" role="tablist" aria-label="Merck journeys">
+          {merckJourneys.map((item) => (
+            <button
+              key={item.id}
+              type="button"
+              role="tab"
+              id={`journey-tab-${item.id}`}
+              aria-selected={item.id === journeyId}
+              aria-controls={`journey-panel-${item.id}`}
+              tabIndex={item.id === journeyId ? 0 : -1}
+              onClick={() => setJourneyId(item.id)}
+            >
+              {item.title}
+            </button>
+          ))}
+        </div>
+        <article
+          className="panel"
+          role="tabpanel"
+          id={`journey-panel-${journey.id}`}
+          aria-labelledby={`journey-tab-${journey.id}`}
+          style={{ marginTop: '1rem' }}
+        >
+          <p className="example-tag">{merckNarrative.journeyLabel}</p>
+          {journey.note ? <p className="hint">{journey.note}</p> : null}
+          <ol className="journey-flow" aria-label={journey.title}>
+            {journey.steps.map((step, index) => (
+              <li className="journey-step js-journey" key={step}>
+                <span className="flow-index">{index + 1}</span>
+                <span>{step}</span>
+              </li>
+            ))}
+          </ol>
+        </article>
+
+        <h3 className="js-reveal" style={{ marginTop: '2.2rem' }}>
           Scrum Master responsibilities
         </h3>
         <ul className="grid-2">
           {caseStudy.responsibilities.map((item) => (
             <li className="card js-reveal" key={item}>
+              {item}
+            </li>
+          ))}
+        </ul>
+
+        <h3 className="js-reveal" style={{ marginTop: '2rem' }}>
+          {merckLeadership.heading}
+        </h3>
+        <ConfidenceLabel kind="experience" />
+        <ul className="grid-2" style={{ marginTop: '1rem' }}>
+          {merckLeadership.points.map((item) => (
+            <li className="chip js-reveal" key={item}>
               {item}
             </li>
           ))}
@@ -102,21 +214,18 @@ export function CaseStudy() {
             </article>
           ))}
         </div>
-        <p className="hint js-reveal">{caseStudy.outcomeNote}</p>
-        <p className="panel js-reveal" style={{ marginTop: '1.2rem' }}>
-          {caseStudy.eShopFloor} eShopFloor was a related plant-facing digital capability, not the
-          eCommerce portal.
-        </p>
-        <h3 className="js-reveal" style={{ marginTop: '2rem' }}>
-          Ecosystem capabilities
-        </h3>
-        <ul className="pill-row js-reveal">
-          {caseStudy.ecosystem.map((item) => (
+        <ul className="pill-row js-reveal" style={{ marginTop: '1rem' }}>
+          {merckLeadership.outcomes.map((item) => (
             <li className="pill" key={item}>
               {item}
             </li>
           ))}
         </ul>
+        <p className="hint js-reveal">{caseStudy.outcomeNote}</p>
+        <p className="panel js-reveal" style={{ marginTop: '1.2rem' }}>
+          {caseStudy.eShopFloor} eShopFloor was a related plant-facing digital capability, not the
+          eCommerce portal.
+        </p>
       </div>
     </section>
   )

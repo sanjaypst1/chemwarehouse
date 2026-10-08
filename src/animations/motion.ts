@@ -26,7 +26,9 @@ export function initMotion(reducedMotion: boolean) {
 
   if (reducedMotion) {
     document.documentElement.classList.remove('has-motion')
-    gsap.set('.js-reveal, .js-hero, .bar span, .flow-step', { clearProps: 'all' })
+    gsap.set('.js-reveal, .js-hero, .bar span, .flow-step, .js-journey, .js-layer, .js-compare', {
+      clearProps: 'all',
+    })
     return () => {
       cleanups.forEach((fn) => fn())
       ScrollTrigger.getAll().forEach((st) => st.kill())
@@ -64,6 +66,43 @@ export function initMotion(reducedMotion: boolean) {
       duration: 0.4,
       ease: 'power2.out',
       scrollTrigger: { trigger: flow, start: 'top 80%' },
+    })
+    cleanups.push(() => tween.kill())
+  }
+
+  document.querySelectorAll<HTMLElement>('.journey-flow').forEach((journey) => {
+    const tween = gsap.from(journey.querySelectorAll('.js-journey'), {
+      opacity: 0,
+      x: 12,
+      stagger: 0.07,
+      duration: 0.4,
+      ease: 'power2.out',
+      scrollTrigger: { trigger: journey, start: 'top 82%' },
+    })
+    cleanups.push(() => tween.kill())
+  })
+
+  document.querySelectorAll<HTMLElement>('.layer-grid').forEach((grid) => {
+    const tween = gsap.from(grid.querySelectorAll('.js-layer'), {
+      opacity: 0,
+      y: 14,
+      stagger: 0.06,
+      duration: 0.45,
+      ease: 'power2.out',
+      scrollTrigger: { trigger: grid, start: 'top 84%' },
+    })
+    cleanups.push(() => tween.kill())
+  })
+
+  const compare = document.querySelector('.compare-grid')
+  if (compare) {
+    const tween = gsap.from('.js-compare', {
+      opacity: 0,
+      y: 16,
+      stagger: 0.1,
+      duration: 0.5,
+      ease: 'power2.out',
+      scrollTrigger: { trigger: compare, start: 'top 82%' },
     })
     cleanups.push(() => tween.kill())
   }

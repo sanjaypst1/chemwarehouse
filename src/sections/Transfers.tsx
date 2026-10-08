@@ -2,7 +2,7 @@ import { transfers } from '../data/transfers'
 
 export function Transfers() {
   return (
-    <section className="section section-mint" id="approach" aria-labelledby="transfer-title">
+    <section className="section section-mint" aria-labelledby="transfer-title">
       <div className="wrap">
         <p className="eyebrow js-reveal">Transferable delivery patterns</p>
         <h2 id="transfer-title" className="js-reveal">
