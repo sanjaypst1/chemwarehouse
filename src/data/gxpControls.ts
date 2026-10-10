@@ -1,11 +1,11 @@
 export const gxpIntro = {
   heading: 'Regulated delivery was built into the lifecycle',
   caution:
-    'The level of GxP control depends on the intended use of the system, the data being handled and whether the capability affects product quality, patient safety, regulated decisions or required records.',
+    'In a pharmaceutical and healthcare-related environment, speed could not come at the expense of regulatory, legal, privacy or compliance obligations. I incorporated these stakeholders and controls into the delivery lifecycle rather than treating approval as a final activity immediately before deployment.',
   principles:
-    'Reference principles include TGA and PIC/S data-integrity expectations, ALCOA+, EU GMP Annex 11 where applicable, FDA 21 CFR Part 11 where electronic regulated records and signatures were in scope, and applicable privacy, medical, advertising and market-specific requirements.',
+    'Relevant legal, regulatory and compliance requirements were converted into backlog items and acceptance criteria. Reference principles include TGA and PIC/S data-integrity expectations, ALCOA+, EU GMP Annex 11 where applicable, FDA 21 CFR Part 11 where electronic regulated records and signatures were in scope, and applicable privacy, medical, advertising and market-specific requirements.',
   boundary:
-    'GxP controls do not automatically apply to all marketing pages or every commerce interaction.',
+    'The level of GxP control depends on intended use and data impact. GxP controls do not automatically apply to all marketing pages or every commerce interaction.',
 }
 
 export const gxpAreas = [

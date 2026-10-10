@@ -1,5 +1,7 @@
+import { customerJourneyTen, journeyDependencyNote } from './interviewNarrative'
+
 export const flowQualification =
-  'Capability-level interpretation based on public platform information and common enterprise commerce patterns.'
+  'Capability-level interpretation based on public platform information, common enterprise commerce patterns and Sanjay’s Merck delivery practice of mapping complete customer journeys.'
 
 export const flowColumns = [
   {
@@ -63,17 +65,9 @@ export const flowColumns = [
   },
 ]
 
-export const commerceJourney = [
-  'Customer searches for a product',
-  'Product and availability information is assembled',
-  'Identity or prescription requirements are evaluated',
-  'Cart and checkout rules are applied',
-  'Payment is authorised',
-  'Order is created',
-  'Fulfilment destination is selected',
-  'Status is communicated',
-  'Operational and analytical records are updated',
-]
+export const commerceJourney = customerJourneyTen
+
+export const commerceJourneyNote = journeyDependencyNote
 
 export const b2bPatterns = [
   {

@@ -1,4 +1,5 @@
 import { Mail, Phone, SquareArrowOutUpRight } from 'lucide-react'
+import { closingStatement } from '../data/interviewNarrative'
 import { closing, profile } from '../data/site'
 
 export function Contact() {
@@ -12,7 +13,9 @@ export function Contact() {
         <p className="lede js-reveal">
           {profile.location} · {profile.residency}
         </p>
-        <p className="lede js-reveal">{closing}</p>
+        <p className="lede js-reveal">{closingStatement.short}</p>
+        <p className="panel js-reveal">{closingStatement.long}</p>
+        <p className="js-reveal">{closing}</p>
         <ul className="contact-list">
           <li>
             <a href={`mailto:${profile.email}`}>

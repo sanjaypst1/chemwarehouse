@@ -1,7 +1,7 @@
 export const comparison = {
   heading: 'Different platforms, transferable delivery patterns',
   statement:
-    'I would not arrive assuming that Chemist Warehouse works exactly like Merck. I would arrive already understanding the delivery patterns, ask the right architecture and dependency questions, and help the team make integration risk visible early.',
+    'I would not arrive assuming that Chemist Warehouse works exactly like Merck. I would arrive already understanding the delivery patterns — journey mapping, API contracts, agency alignment, progressive testing and release confidence — ask the right architecture and dependency questions, and help the team make integration risk visible early.',
   chemist: {
     title: 'Chemist Warehouse context',
     items: [

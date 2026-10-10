@@ -72,32 +72,32 @@ export const caseStudy = {
     {
       id: 'context',
       title: 'Delivery context',
-      body: 'The initiative supported the MSD pharmaceutical network across China, Japan, Singapore and Indonesia. The digital ecosystem enabled healthcare-professional engagement and B2B commerce-related capabilities, with staged market releases and a mix of customer-facing, enterprise and operational contexts.',
+      body: 'The initiative supported the MSD pharmaceutical network across China, Japan, Singapore and Indonesia. The existing environment involved multiple systems, different data owners, manual hand-offs and varying data quality. The digital ecosystem enabled healthcare-professional engagement and B2B commerce-related capabilities, with staged market releases across customer-facing, enterprise and operational contexts.',
     },
     {
       id: 'responsibilities',
       title: 'My Scrum Master responsibilities',
-      body: 'I enabled distributed Agile teams, facilitated Scrum and Kanban rhythms, and kept planning, Daily Scrums, reviews, refinement and retrospectives focused on flow. I supported backlog prioritisation, sizing and capacity planning, and used delivery evidence to help Product Owners make trade-offs.',
+      body: 'My responsibility was to establish predictable delivery flow. I facilitated Sprint Planning, Daily Scrums, refinement, Sprint Reviews and Retrospectives as control points for backlog quality, dependencies and release protection — not as the outcome itself. I partnered with the Product Owner and Project Manager on prioritisation, capacity, estimation, release sequencing and scope trade-offs.',
     },
     {
       id: 'complexity',
       title: 'Complexity I managed',
-      body: 'Delivery spanned backend services, customer-facing journeys, APIs, consent, data interfaces, Salesforce effectiveness capabilities, external delivery partners, regulated stakeholders and staged releases. The work required visible ownership, calm escalation and coordination across internal and external partners.',
+      body: 'This was not simply a website implementation. It was an end-to-end transformation involving the frontend portal, backend services, APIs, product and customer data, enterprise systems, security, compliance and operational processes — each with a different owner, schedule and definition of readiness.',
     },
     {
       id: 'practices',
       title: 'Delivery practices I introduced',
-      body: 'I made blockers and ageing work visible, strengthened dependency management, and connected Sprint progress to release readiness. Incremental delivery, supplier coordination and earlier integration-risk resolution helped the programme protect quality while moving toward fixed milestones.',
+      body: 'I managed integration as a continuous activity: journey mapping, participating systems, interface contracts, named dependency owners, mocks where needed, regular integration checkpoints and Sprint Reviews that demonstrated complete customer journeys rather than isolated components.',
     },
     {
       id: 'outcomes',
       title: 'Outcomes achieved',
-      body: 'Working with the wider team, the environment maintained approximately 90% on-time delivery and improved system availability by 35%. Incremental delivery strengthened release predictability, earlier dependency management reduced late integration surprises, and velocity, throughput, quality, capacity and risk evidence improved decision quality.',
+      body: 'Working with the wider team, the environment maintained approximately 90% on-time delivery and improved system availability by 35%. Incremental delivery strengthened release predictability, earlier dependency management reduced late integration surprises, and throughput, cycle time, quality, capacity and risk evidence improved decision quality.',
     },
     {
       id: 'relevance',
       title: 'Relevance to Chemist Warehouse',
-      body: 'I do not claim that the Merck/MSD platform and Chemist Warehouse platform are technically identical. The transferable delivery patterns are directly relevant: backend and frontend coordination, API and integration dependencies, B2B customer journeys, partner alignment, fixed release milestones, data and consent considerations, and release confidence in a controlled environment.',
+      body: 'I do not claim that the Merck/MSD platform and Chemist Warehouse platform are technically identical. The transferable delivery patterns are directly relevant: headless frontend and backend coordination, API contracts, agency alignment, data readiness, progressive testing, regulated controls and evidence-based release confidence.',
     },
   ],
 }

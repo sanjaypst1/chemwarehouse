@@ -3,6 +3,7 @@ import {
   b2bPatterns,
   b2bQualification,
   commerceJourney,
+  commerceJourneyNote,
   flowColumns,
   flowQualification,
 } from '../data/upstreamDownstream'
@@ -32,8 +33,13 @@ export function UpstreamDownstream() {
           ))}
         </div>
         <h3 className="js-reveal" style={{ marginTop: '2rem' }}>
-          Animated commerce journey
+          Example customer journey and dependencies
         </h3>
+        <p className="js-reveal">
+          To manage delivery properly, I map the solution around complete customer journeys rather
+          than looking only at individual system components — for example a business customer signing
+          in, locating a product and submitting an order.
+        </p>
         <ol className="journey-flow" aria-label="Illustrative pharmaceutical commerce journey">
           {commerceJourney.map((step, index) => (
             <li className="journey-step js-journey" key={step}>
@@ -42,6 +48,9 @@ export function UpstreamDownstream() {
             </li>
           ))}
         </ol>
+        <p className="prominent-callout js-reveal" role="note" style={{ marginTop: '1rem' }}>
+          {commerceJourneyNote}
+        </p>
         <article className="panel js-reveal" style={{ marginTop: '2.2rem' }}>
           <p className="eyebrow">Supplier patterns</p>
           <h3>Relevant B2B and supplier integration patterns</h3>

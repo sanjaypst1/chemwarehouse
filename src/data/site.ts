@@ -16,35 +16,36 @@ export const profile = {
 }
 
 export const hero = {
-  headline: 'Improving delivery flow across backend squads, digital commerce journeys and partner dependencies.',
+  headline:
+    'Improving delivery flow across backend squads, digital commerce journeys and partner dependencies.',
   supporting:
-    'I help Product Owners, engineers, delivery partners and business stakeholders turn complex platform dependencies into focused Sprint Goals, predictable flow and release-ready outcomes.',
+    'I combine senior Scrum Master leadership with hands-on digital delivery across backend teams, APIs, data integrations, customer journeys and external partners — focusing on flow, dependency coordination, impediment removal and clear release confidence, not ceremony completion alone.',
   primaryCta: { label: 'Explore my relevant experience', href: '#case-study' },
   secondaryCta: { label: 'View my 30-60-90 day plan', href: '#plan' },
 }
 
 export const credibility = [
   '18+ years across digital and technology delivery',
-  'Digital B2B eCommerce transformation',
-  'Headless, API and multi-system delivery',
-  'Internal squad and external partner coordination',
+  'Digital B2B eCommerce-style portal delivery at Merck',
+  'Headless, API and multi-system delivery understanding',
+  'Internal squad and external agency coordination',
   'Jira and Azure DevOps visibility',
   'Australian Permanent Resident',
 ]
 
 export const whyPoints = [
-  'I have worked in comparable B2B digital platform environments.',
-  'I understand backend, API, frontend and supplier interdependencies.',
-  'I partner effectively with Product Owners and Project Managers.',
-  'I combine delivery discipline with pragmatic Agile facilitation.',
-  'I focus on integrated outcomes, not ceremony completion.',
+  'I have already led a comparable pharmaceutical digital-commerce delivery model across journeys, APIs, data and partners.',
+  'I understand headless frontend separation, microservices backends and why dependency management is the real Scrum Master challenge.',
+  'I partner with Product Owners and Project Managers on prioritisation, capacity, scope trade-offs and release sequencing.',
+  'I manage integration continuously — contracts, mocks, checkpoints and end-to-end journey demos — not as a final project phase.',
+  'I build regulatory, privacy, security and operational readiness into backlog and acceptance criteria, then report release confidence with evidence.',
 ]
 
 export const closing =
-  'I would welcome the opportunity to discuss how my Merck/MSD B2B eCommerce delivery experience could help strengthen flow, partner alignment and release confidence across this programme.'
+  'I would not limit my contribution to running ceremonies. I would create alignment across the entire delivery ecosystem, remove impediments early and help this B2B eCommerce programme reach its target deployment dates with an evidence-based understanding of risk and readiness.'
 
 export const footerNote =
-  'This website presents selected professional experience and a proposed delivery approach. Programme-specific observations are based on the publicly shared role description and do not represent internal Chemist Warehouse information.'
+  'This website presents selected professional experience and a proposed delivery approach. Programme-specific observations are based on the publicly shared role description and publicly documented platform information. They do not represent internal Chemist Warehouse information.'
 
 export const leadershipQuote =
   'My responsibility is not to make the team look busy. It is to help the delivery system produce valuable, integrated and release-ready outcomes with increasing confidence.'
@@ -56,4 +57,4 @@ export const cadenceNote =
   'The final cadence would be agreed with the team and adapted to the programme’s existing delivery model.'
 
 export const metricsPrinciple =
-  'I use metrics to expose system constraints and improve forecasting. I do not use team metrics to compare individuals or pressure teams into artificial velocity.'
+  'I use metrics to support forecasting and continuous improvement rather than to compare individuals. Throughput, cycle time, work-item ageing, defect trends and dependency health show where flow is constrained.'

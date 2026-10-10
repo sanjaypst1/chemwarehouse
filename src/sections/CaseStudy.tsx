@@ -3,6 +3,14 @@ import { ConfidenceLabel } from '../components/ConfidenceLabel'
 import { LayerAccordion } from '../components/LayerAccordion'
 import { caseStudy } from '../data/caseStudy'
 import {
+  integrationApproach,
+  merckSituation,
+  seriousDelayExample,
+  testingLevels,
+  transformationChallenges,
+  uiReadyDone,
+} from '../data/interviewNarrative'
+import {
   merckApiDomains,
   merckCapabilityLayers,
   merckJourneys,
@@ -85,6 +93,97 @@ export function CaseStudy() {
           <h3>{chapter.title}</h3>
           <p>{chapter.body}</p>
         </article>
+
+        <h3 className="js-reveal" style={{ marginTop: '2.2rem' }}>
+          Situation and my role
+        </h3>
+        <p className="js-reveal">{merckSituation.situation}</p>
+        <p className="js-reveal">{merckSituation.stakeholders}</p>
+        {merckSituation.myRole.map((paragraph) => (
+          <p className="js-reveal" key={paragraph.slice(0, 40)}>
+            {paragraph}
+          </p>
+        ))}
+        <p className="panel js-reveal">{merckSituation.ecosystemNote}</p>
+        <ul className="pill-row js-reveal">
+          {merckSituation.operatingModel.map((item) => (
+            <li className="pill" key={item}>
+              {item}
+            </li>
+          ))}
+        </ul>
+
+        <h3 className="js-reveal" style={{ marginTop: '2.2rem' }}>
+          Major challenges during the transformation
+        </h3>
+        <div className="challenge-grid" style={{ marginTop: '1rem' }}>
+          {transformationChallenges.map((item) => (
+            <article className="card js-reveal" key={item.id}>
+              <h4>{item.challenge}</h4>
+              <p>{item.response}</p>
+            </article>
+          ))}
+        </div>
+
+        <h3 className="js-reveal" style={{ marginTop: '2.2rem' }}>
+          How I ensured integration happened successfully
+        </h3>
+        <p className="js-reveal">
+          I managed integration as a continuous delivery activity rather than a final project phase.
+        </p>
+        <ol className="journey-flow" aria-label="Integration management approach">
+          {integrationApproach.map((item, index) => (
+            <li className="journey-step js-journey" key={item.step}>
+              <span className="flow-index">{index + 1}</span>
+              <span>
+                <strong>{item.step}</strong>
+                <br />
+                {item.detail}
+              </span>
+            </li>
+          ))}
+        </ol>
+        <p className="panel js-reveal" style={{ marginTop: '1rem' }}>
+          {seriousDelayExample}
+        </p>
+
+        <h3 className="js-reveal" style={{ marginTop: '2.2rem' }}>
+          How we tested the solution
+        </h3>
+        <p className="js-reveal">
+          Testing was risk-based and conducted at multiple levels. We did not wait until the end of
+          the programme to discover whether the systems could work together.
+        </p>
+        <div className="grid-2" style={{ marginTop: '1rem' }}>
+          {testingLevels.map((item) => (
+            <article className="card js-reveal" key={item.title}>
+              <h4>{item.title}</h4>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+
+        <h3 className="js-reveal" style={{ marginTop: '2.2rem' }}>
+          Frontend portal readiness and done
+        </h3>
+        <div className="grid-2" style={{ marginTop: '1rem' }}>
+          <article className="card js-reveal">
+            <h4>Definition of Ready for UI stories</h4>
+            <ul>
+              {uiReadyDone.ready.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </article>
+          <article className="card js-reveal">
+            <h4>Definition of Done for portal features</h4>
+            <ul>
+              {uiReadyDone.done.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </article>
+        </div>
 
         <h3 className="js-reveal" style={{ marginTop: '2.2rem' }}>
           Two connected but different value streams

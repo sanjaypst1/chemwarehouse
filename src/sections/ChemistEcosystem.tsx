@@ -7,6 +7,7 @@ import {
   chemistLayers,
   chemistQualification,
 } from '../data/chemistArchitecture'
+import { platformCapabilityNote } from '../data/interviewNarrative'
 
 export function ChemistEcosystem() {
   return (
@@ -44,6 +45,14 @@ export function ChemistEcosystem() {
           <p className="prominent-callout" role="note">
             {apiConceptCallout}
           </p>
+        </article>
+        <article className="panel js-reveal" style={{ marginTop: '1.5rem' }}>
+          <h3>{platformCapabilityNote.heading}</h3>
+          <ConfidenceLabel kind="verified" />
+          {platformCapabilityNote.paragraphs.map((paragraph) => (
+            <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+          ))}
+          <p className="hint">{platformCapabilityNote.qualification}</p>
         </article>
       </div>
     </section>

@@ -4,41 +4,41 @@ export const alignmentItems = [
     title: 'Scrum and Kanban facilitation',
     need: 'Focused planning, stand-ups, reviews, refinement and retrospectives.',
     experience:
-      'Established and facilitated Scrum and Kanban rhythms across product discovery, prioritisation, sizing, development, validation and staged releases.',
+      'I facilitated Sprint Planning, Daily Scrums, refinement, Sprint Reviews and Retrospectives — but treated them as control points for backlog quality, dependency visibility, issue resolution and release protection, not as the outcome itself.',
   },
   {
     id: 'dependencies',
     title: 'Backend and frontend dependency coordination',
     need: 'Coordinate internal backend squads with an external frontend agency.',
     experience:
-      'Coordinated dependencies across backend services, customer-facing journeys, APIs, data interfaces, Salesforce effectiveness capabilities and external delivery partners.',
+      'I maintained an integrated dependency plan linking frontend features to backend services, APIs, data, environments, test windows and release milestones so a “complete” frontend screen never waited silently on an unavailable service.',
   },
   {
     id: 'partnership',
     title: 'Product Owner and Project Manager partnership',
     need: 'Support prioritisation, capacity planning, sizing and release tracking.',
     experience:
-      'Worked with Product Owners, programme leaders and delivery stakeholders to expose constraints, support trade-off decisions and align scope with capacity, risk and release targets.',
+      'I worked closely with the Product Owner and Project Manager on backlog prioritisation, capacity planning, estimation, release sequencing and scope trade-offs when dependencies or controls affected the plan.',
   },
   {
     id: 'fixed-date',
     title: 'Fixed-date delivery confidence',
     need: 'Remove blockers and escalate risks early against strict deployment dates.',
     experience:
-      'Used incremental releases, disciplined impediment removal, supplier coordination and early integration-risk resolution to maintain strong milestone performance.',
+      'I surfaced schedule, integration and compliance risks early with cause, impact, options and decision dates — including mock-backed development, feature toggles or reduced secondary scope when needed to protect the release.',
   },
   {
     id: 'visibility',
     title: 'Jira and Azure DevOps visibility',
     need: 'Maintain reliable delivery tracking and decision-ready reporting.',
     experience:
-      'Used Jira, Azure DevOps, Confluence and Power BI to track velocity, throughput, ageing work, dependencies, blockers, risks and release readiness.',
+      'I used delivery tools and programme reporting to track throughput, cycle time, ageing work, dependency health, defects and release readiness — tailored so executives received decision-ready options, not only status colour.',
   },
   {
     id: 'improvement',
     title: 'Sustainable improvement',
     need: 'Increase predictability while protecting psychological safety.',
     experience:
-      'Coached teams in servant leadership, constructive conflict resolution, accountable delivery, empirical planning and psychologically safe retrospectives.',
+      'I protected psychological safety while keeping ownership explicit, used progressive integration and testing to reduce late surprises, and ran post-release learning on delays, dependencies and controls that actually added value.',
   },
 ]
